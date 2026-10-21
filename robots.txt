@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aaron-byte2010.github.io/juegazone/sitemap.xml
