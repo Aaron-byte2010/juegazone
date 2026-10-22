@@ -42,18 +42,18 @@
  <circle cx="563" cy="254" r="36" fill="#0b1424" stroke="#7a2dff" stroke-width="5" filter="url(#glow)"/>
  <circle cx="563" cy="254" r="25" fill="#050a12" stroke="#23334b" stroke-width="4"/>
 </g>
-<!-- center touchpad -->
+<!-- center panel and glowing Xbox-inspired emblem -->
 <path d="M394 163 Q455 146 516 162 L526 220 Q460 240 390 219 Z" fill="#01040b" stroke="#02040a" stroke-width="7" opacity=".85"/>
 <path d="M394 157 Q455 140 516 156 L526 214 Q460 234 390 213 Z" fill="#050914" stroke="#2c3b59" stroke-width="4"/>
 <path d="M401 160 Q455 147 509 160" fill="none" stroke="#7c9fca" stroke-width="2" opacity=".5"/>
-<path d="M404 166 Q457 152 507 165" fill="none" stroke="#167eff" stroke-width="3" opacity=".9" filter="url(#glow)"/>
+<path d="M404 166 Q457 152 507 165" fill="none" stroke="#167eff" stroke-width="3" opacity=".9" filter="url(#glow)"/><circle cx="456" cy="185" r="20" fill="#071321" stroke="#18c8ff" stroke-width="3" filter="url(#glow)"/><path d="M443 173 Q456 182 469 173 Q465 186 456 195 Q447 186 443 173 M443 173 L456 181 L469 173" fill="none" stroke="#e8fbff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <g fill="#1c2a40"><circle cx="444" cy="232" r="3"/><circle cx="455" cy="232" r="3"/><circle cx="466" cy="232" r="3"/><circle cx="477" cy="232" r="3"/></g>
 <!-- action buttons -->
 <g transform="translate(655 213)" filter="url(#glow)">
- <circle cx="0" cy="-34" r="17" fill="#07101f" stroke="#20cfff" stroke-width="4"/><path d="M-6 -40 L6 -28 M6 -40 L-6 -28" stroke="#20cfff" stroke-width="3"/>
- <circle cx="35" cy="0" r="17" fill="#07101f" stroke="#f02cff" stroke-width="4"/><circle cx="35" cy="0" r="6" fill="none" stroke="#f02cff" stroke-width="2"/>
- <circle cx="0" cy="34" r="17" fill="#07101f" stroke="#20cfff" stroke-width="4"/><path d="M0 25 L8 40 L-8 40 Z" fill="none" stroke="#20cfff" stroke-width="2"/>
- <circle cx="-35" cy="0" r="17" fill="#07101f" stroke="#9d59ff" stroke-width="4"/><path d="M-41 -6 L-29 6 M-29 -6 L-41 6" stroke="#9d59ff" stroke-width="3"/>
+ <circle cx="0" cy="-34" r="18" fill="#07101f" stroke="#d946ef" stroke-width="4"/><text x="0" y="-28" text-anchor="middle" font-size="18" font-weight="900" fill="#f0abfc" stroke="none">Y</text>
+ <circle cx="35" cy="0" r="18" fill="#07101f" stroke="#ff4d8d" stroke-width="4"/><text x="35" y="6" text-anchor="middle" font-size="18" font-weight="900" fill="#ff9dbf" stroke="none">B</text>
+ <circle cx="0" cy="34" r="18" fill="#07101f" stroke="#39e58c" stroke-width="4"/><text x="0" y="40" text-anchor="middle" font-size="18" font-weight="900" fill="#7dffb4" stroke="none">A</text>
+ <circle cx="-35" cy="0" r="18" fill="#07101f" stroke="#20cfff" stroke-width="4"/><text x="-35" y="6" text-anchor="middle" font-size="18" font-weight="900" fill="#8beaff" stroke="none">X</text>
 </g>
 <!-- shoulder buttons -->
 <path d="M219 137 Q267 118 310 139 L344 154 L331 177 L244 160 Z" fill="#101b30" stroke="#263d5c" stroke-width="4"/>
