@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Mando negro iluminado en azul y morado">
+<defs>
+ <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#202c43"/><stop offset=".28" stop-color="#070d1b"/><stop offset=".62" stop-color="#11182b"/><stop offset="1" stop-color="#02050c"/></linearGradient>
+ <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#13c8ff"/><stop offset=".45" stop-color="#155cff"/><stop offset="1" stop-color="#d42cff"/></linearGradient>
+ <linearGradient id="grip" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111a2e"/><stop offset=".5" stop-color="#03060d"/><stop offset="1" stop-color="#18233a"/></linearGradient>
+ <radialGradient id="lightBlue"><stop stop-color="#008cff" stop-opacity=".9"/><stop offset="1" stop-color="#007bff" stop-opacity="0"/></radialGradient>
+ <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="13"/></filter>
+</defs>
+<ellipse cx="458" cy="400" rx="285" ry="48" fill="#006dff" opacity=".2" filter="url(#shadow)"/>
+<ellipse cx="590" cy="360" rx="205" ry="40" fill="#b000ff" opacity=".18" filter="url(#shadow)"/>
+<path d="M190 153 Q225 110 282 130 L370 160 Q448 175 520 151 L620 125 Q682 112 716 162 L802 300 Q820 340 790 365 L742 403 Q712 423 686 399 L622 342 Q594 322 565 330 Q466 357 365 330 Q335 322 306 345 L242 401 Q215 423 187 399 L133 358 Q104 337 121 300 Z" fill="none" stroke="url(#edge)" stroke-width="20" opacity=".85" filter="url(#glow)"/>
+<path d="M190 153 Q225 110 282 130 L370 160 Q448 175 520 151 L620 125 Q682 112 716 162 L802 300 Q820 340 790 365 L742 403 Q712 423 686 399 L622 342 Q594 322 565 330 Q466 357 365 330 Q335 322 306 345 L242 401 Q215 423 187 399 L133 358 Q104 337 121 300 Z" fill="url(#body)" stroke="#1c385e" stroke-width="4"/>
+<path d="M184 168 Q215 131 272 145 L362 174 Q450 195 528 166 L624 141 Q672 130 704 174 L777 299 Q793 326 773 348 L731 382 Q708 399 685 378 L613 321 Q588 302 560 313 Q465 344 369 313 Q337 303 310 324 L238 381 Q216 399 194 380 L147 344 Q128 328 142 301 Z" fill="url(#grip)" stroke="#101a2c" stroke-width="3"/>
+<path d="M205 172 Q235 149 270 159 L351 185 M547 179 L631 154 Q668 145 691 180" fill="none" stroke="#42cfff" stroke-width="5" opacity=".8" filter="url(#glow)"/>
+<!-- left grip texture -->
+<path d="M160 303 l32 44 M177 292 l34 45 M194 282 l34 45 M211 272 l31 43" stroke="#1b3455" stroke-width="4" opacity=".7"/>
+<!-- right grip texture -->
+<path d="M696 271 l32 45 M714 262 l34 45 M732 253 l32 44 M750 244 l28 39" stroke="#2c2850" stroke-width="4" opacity=".8"/>
+<!-- D pad -->
+<g transform="translate(272 224)" fill="#050a13" stroke="#243d5d" stroke-width="4">
+ <rect x="-17" y="-53" width="34" height="106" rx="8"/><rect x="-53" y="-17" width="106" height="34" rx="8"/>
+ <path d="M-12 -43 L12 -43 M-12 43 L12 43 M-43 -12 L-43 12 M43 -12 L43 12" stroke="#1a9cff" stroke-width="2" opacity=".7"/>
+</g>
+<!-- thumbsticks -->
+<g>
+ <circle cx="367" cy="267" r="49" fill="#03060c" stroke="#283d5b" stroke-width="7"/>
+ <circle cx="367" cy="267" r="36" fill="#0b1424" stroke="#117aff" stroke-width="5" filter="url(#glow)"/>
+ <circle cx="367" cy="267" r="25" fill="#050a12" stroke="#23334b" stroke-width="4"/>
+ <circle cx="563" cy="254" r="49" fill="#03060c" stroke="#283d5b" stroke-width="7"/>
+ <circle cx="563" cy="254" r="36" fill="#0b1424" stroke="#7a2dff" stroke-width="5" filter="url(#glow)"/>
+ <circle cx="563" cy="254" r="25" fill="#050a12" stroke="#23334b" stroke-width="4"/>
+</g>
+<!-- center touchpad -->
+<path d="M394 157 Q455 140 516 156 L526 214 Q460 234 390 213 Z" fill="#050914" stroke="#2c3b59" stroke-width="4"/>
+<path d="M404 166 Q457 152 507 165" fill="none" stroke="#167eff" stroke-width="3" opacity=".9" filter="url(#glow)"/>
+<g fill="#1c2a40"><circle cx="444" cy="232" r="3"/><circle cx="455" cy="232" r="3"/><circle cx="466" cy="232" r="3"/><circle cx="477" cy="232" r="3"/></g>
+<!-- action buttons -->
+<g transform="translate(655 213)" filter="url(#glow)">
+ <circle cx="0" cy="-34" r="17" fill="#07101f" stroke="#20cfff" stroke-width="4"/><path d="M-6 -40 L6 -28 M6 -40 L-6 -28" stroke="#20cfff" stroke-width="3"/>
+ <circle cx="35" cy="0" r="17" fill="#07101f" stroke="#f02cff" stroke-width="4"/><circle cx="35" cy="0" r="6" fill="none" stroke="#f02cff" stroke-width="2"/>
+ <circle cx="0" cy="34" r="17" fill="#07101f" stroke="#20cfff" stroke-width="4"/><path d="M0 25 L8 40 L-8 40 Z" fill="none" stroke="#20cfff" stroke-width="2"/>
+ <circle cx="-35" cy="0" r="17" fill="#07101f" stroke="#9d59ff" stroke-width="4"/><path d="M-41 -6 L-29 6 M-29 -6 L-41 6" stroke="#9d59ff" stroke-width="3"/>
+</g>
+<!-- shoulder buttons -->
+<path d="M219 137 Q267 118 310 139 L344 154 L331 177 L244 160 Z" fill="#101b30" stroke="#263d5c" stroke-width="4"/>
+<path d="M602 139 Q650 118 692 151 L672 173 L592 163 Z" fill="#101b30" stroke="#4a2a73" stroke-width="4"/>
+<path d="M230 142 Q270 129 307 146 M610 144 Q650 130 681 154" fill="none" stroke="url(#edge)" stroke-width="4" filter="url(#glow)"/>
+<!-- small system buttons -->
+<g fill="#172640" stroke="#4a6284" stroke-width="2"><rect x="415" y="242" width="18" height="8" rx="3"/><rect x="492" y="240" width="18" height="8" rx="3"/></g>
+</svg>
