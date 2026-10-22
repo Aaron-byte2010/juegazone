@@ -6,12 +6,21 @@
  <radialGradient id="lightBlue"><stop stop-color="#008cff" stop-opacity=".9"/><stop offset="1" stop-color="#007bff" stop-opacity="0"/></radialGradient>
  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="13"/></filter>
+ <linearGradient id="bevel" x1="0" y1="0" x2="0.2" y2="1"><stop stop-color="#8bdfff" stop-opacity=".72"/><stop offset=".22" stop-color="#253b5c" stop-opacity=".55"/><stop offset=".58" stop-color="#030711" stop-opacity=".1"/><stop offset="1" stop-color="#02040a" stop-opacity=".95"/></linearGradient>
+ <linearGradient id="topLight" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0a8dff" stop-opacity=".8"/><stop offset=".5" stop-color="#1b2a49" stop-opacity=".2"/><stop offset="1" stop-color="#c12cff" stop-opacity=".85"/></linearGradient>
+ <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="20"/></filter>
 </defs>
-<ellipse cx="458" cy="400" rx="285" ry="48" fill="#006dff" opacity=".2" filter="url(#shadow)"/>
+<ellipse cx="458" cy="414" rx="300" ry="52" fill="#006dff" opacity=".22" filter="url(#shadow)"/>
+<ellipse cx="475" cy="190" rx="260" ry="90" fill="#087dff" opacity=".08" filter="url(#softGlow)"/>
 <ellipse cx="590" cy="360" rx="205" ry="40" fill="#b000ff" opacity=".18" filter="url(#shadow)"/>
 <path d="M190 153 Q225 110 282 130 L370 160 Q448 175 520 151 L620 125 Q682 112 716 162 L802 300 Q820 340 790 365 L742 403 Q712 423 686 399 L622 342 Q594 322 565 330 Q466 357 365 330 Q335 322 306 345 L242 401 Q215 423 187 399 L133 358 Q104 337 121 300 Z" fill="none" stroke="url(#edge)" stroke-width="20" opacity=".85" filter="url(#glow)"/>
+<!-- lower cast shadow creates a raised 3D body -->
+<path d="M190 153 Q225 110 282 130 L370 160 Q448 175 520 151 L620 125 Q682 112 716 162 L802 300 Q820 340 790 365 L742 403 Q712 423 686 399 L622 342 Q594 322 565 330 Q466 357 365 330 Q335 322 306 345 L242 401 Q215 423 187 399 L133 358 Q104 337 121 300 Z" transform="translate(0 13)" fill="#01030a" stroke="#050a16" stroke-width="8" filter="url(#shadow)"/>
 <path d="M190 153 Q225 110 282 130 L370 160 Q448 175 520 151 L620 125 Q682 112 716 162 L802 300 Q820 340 790 365 L742 403 Q712 423 686 399 L622 342 Q594 322 565 330 Q466 357 365 330 Q335 322 306 345 L242 401 Q215 423 187 399 L133 358 Q104 337 121 300 Z" fill="url(#body)" stroke="#1c385e" stroke-width="4"/>
 <path d="M184 168 Q215 131 272 145 L362 174 Q450 195 528 166 L624 141 Q672 130 704 174 L777 299 Q793 326 773 348 L731 382 Q708 399 685 378 L613 321 Q588 302 560 313 Q465 344 369 313 Q337 303 310 324 L238 381 Q216 399 194 380 L147 344 Q128 328 142 301 Z" fill="url(#grip)" stroke="#101a2c" stroke-width="3"/>
+<!-- sculpted glossy bevel and top-facing reflections -->
+<path d="M190 153 Q225 110 282 130 L370 160 Q448 175 520 151 L620 125 Q682 112 716 162 L802 300 Q820 340 790 365 L742 403 Q712 423 686 399 L622 342 Q594 322 565 330 Q466 357 365 330 Q335 322 306 345 L242 401 Q215 423 187 399 L133 358 Q104 337 121 300 Z" fill="url(#bevel)" opacity=".62"/>
+<path d="M210 153 Q238 127 282 140 L370 169 Q448 185 520 160 L620 136 Q676 123 707 166" fill="none" stroke="url(#topLight)" stroke-width="7" opacity=".85" filter="url(#glow)"/>
 <path d="M205 172 Q235 149 270 159 L351 185 M547 179 L631 154 Q668 145 691 180" fill="none" stroke="#42cfff" stroke-width="5" opacity=".8" filter="url(#glow)"/>
 <!-- left grip texture -->
 <path d="M160 303 l32 44 M177 292 l34 45 M194 282 l34 45 M211 272 l31 43" stroke="#1b3455" stroke-width="4" opacity=".7"/>
@@ -24,15 +33,19 @@
 </g>
 <!-- thumbsticks -->
 <g>
- <circle cx="367" cy="267" r="49" fill="#03060c" stroke="#283d5b" stroke-width="7"/>
+ <ellipse cx="367" cy="275" rx="52" ry="49" fill="#01030a" opacity=".8"/>
+ <circle cx="367" cy="267" r="49" fill="url(#body)" stroke="#283d5b" stroke-width="7"/>
  <circle cx="367" cy="267" r="36" fill="#0b1424" stroke="#117aff" stroke-width="5" filter="url(#glow)"/>
  <circle cx="367" cy="267" r="25" fill="#050a12" stroke="#23334b" stroke-width="4"/>
- <circle cx="563" cy="254" r="49" fill="#03060c" stroke="#283d5b" stroke-width="7"/>
+ <ellipse cx="563" cy="262" rx="52" ry="49" fill="#01030a" opacity=".8"/>
+ <circle cx="563" cy="254" r="49" fill="url(#body)" stroke="#283d5b" stroke-width="7"/>
  <circle cx="563" cy="254" r="36" fill="#0b1424" stroke="#7a2dff" stroke-width="5" filter="url(#glow)"/>
  <circle cx="563" cy="254" r="25" fill="#050a12" stroke="#23334b" stroke-width="4"/>
 </g>
 <!-- center touchpad -->
+<path d="M394 163 Q455 146 516 162 L526 220 Q460 240 390 219 Z" fill="#01040b" stroke="#02040a" stroke-width="7" opacity=".85"/>
 <path d="M394 157 Q455 140 516 156 L526 214 Q460 234 390 213 Z" fill="#050914" stroke="#2c3b59" stroke-width="4"/>
+<path d="M401 160 Q455 147 509 160" fill="none" stroke="#7c9fca" stroke-width="2" opacity=".5"/>
 <path d="M404 166 Q457 152 507 165" fill="none" stroke="#167eff" stroke-width="3" opacity=".9" filter="url(#glow)"/>
 <g fill="#1c2a40"><circle cx="444" cy="232" r="3"/><circle cx="455" cy="232" r="3"/><circle cx="466" cy="232" r="3"/><circle cx="477" cy="232" r="3"/></g>
 <!-- action buttons -->
