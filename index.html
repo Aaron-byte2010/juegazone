@@ -45,12 +45,49 @@
 .hero>*:not(.hero-controller){position:relative;z-index:3}
 @media(max-width:700px){.hero{padding-bottom:150px;min-height:380px}.hero-controller{width:85%;right:2%;top:auto;bottom:-32px;transform:none;max-height:230px;z-index:2}.hero>*:not(.hero-controller){z-index:3}}
 
+
+/* Pulido visual juegaZone: banner Xbox, categorías y tarjetas neon */
+:root{--bg:#030713;--panel:#061329;--line:#075bba;--purple:#812bff;--cyan:#09c9ff}
+header{max-width:none;padding:12px max(3.2%,calc((100% - 1440px)/2));}
+.logo{font-size:1.8rem;text-shadow:0 0 20px #2d6dff45}
+.logo span{background:linear-gradient(90deg,#11caff,#5a72ff,#b64dff);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a{padding:8px 10px;border-radius:999px;transition:background .2s,color .2s}
+nav a:hover{background:#0a2450;color:#36d8ff}
+main{padding-top:16px}
+.hero{border-radius:8px;min-height:320px;padding:clamp(26px,4vw,48px);background:radial-gradient(ellipse at 76% 48%,#075dff2b 0%,transparent 32%),radial-gradient(ellipse at 87% 50%,#a500ff28 0%,transparent 32%),linear-gradient(100deg,#020611 0%,#030817 55%,#050719 100%);box-shadow:inset 0 0 65px #02061180,0 15px 50px #0008}
+.hero h1{font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:900;max-width:600px;text-shadow:0 4px 28px #000}
+.hero h1 span{background:linear-gradient(90deg,#06caff,#3278ff,#9d4dff);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.hero p:not(.eyebrow){max-width:510px}
+.hero .eyebrow{display:inline-flex;border:1px solid #1265ff;border-radius:999px;padding:7px 13px;background:#03152c;color:#38ddff;letter-spacing:.07em}
+.hero .btn{border-radius:999px;background:linear-gradient(100deg,#8b20ff,#078cff);box-shadow:0 0 24px #5d20ff55;padding:13px 20px}
+.hero-controller{width:min(55%,720px);right:4%;filter:drop-shadow(0 0 13px #006dff99) drop-shadow(0 0 28px #8a20ff66)}
+.category-bar{display:flex;gap:10px;overflow-x:auto;padding:12px 2px 5px;margin:0 0 14px;scrollbar-width:thin}
+.category-chip{white-space:nowrap;border:1px solid #0757ad;background:#030e21;color:#cceaff;border-radius:999px;padding:10px 18px;font:600 .9rem system-ui;cursor:pointer;transition:all .18s}
+.category-chip:hover,.category-chip.selected{border-color:#268dff;background:linear-gradient(100deg,#7e20ff,#087dff);color:white;box-shadow:0 0 18px #315dff45}
+.search{margin:12px 0 18px}
+.search input{border-radius:999px;border-color:#0b5db8;background:#030d1e}
+.section-head h2{font-size:1.55rem}
+.card{border-radius:9px;padding:10px;border-color:#0752a2;background:linear-gradient(150deg,#071b37,#020918 78%);box-shadow:inset 0 1px 0 #ffffff0a,0 7px 18px #0002}
+.card:hover{border-color:#23c8ff;box-shadow:0 0 0 1px #0b75ff30,0 10px 28px #006aff25}
+.cover{margin:-10px -10px 11px;width:calc(100% + 20px);border-radius:8px 8px 0 0;border-bottom-color:#0967c4}
+.tag{background:#082957;border-color:#0e4c89;color:#aee8ff}
+.card .btn{background:linear-gradient(100deg,#7825ed,#087ff4);border-radius:999px;padding:9px 13px}
+.game{border-radius:12px;border-color:#0a5db4;box-shadow:0 0 25px #006dff12}
+footer{background:linear-gradient(180deg,transparent,#030916);border-color:#0b3972}
+@media(max-width:700px){.hero{min-height:380px;padding-bottom:150px}.hero-controller{width:88%;right:0;bottom:-25px;max-height:235px}.hero h1{font-size:2.5rem}.category-bar{margin-top:5px}.category-chip{padding:9px 14px}}
 </style>
 </head>
 <body>
 <header><div class="logo">🎮 juega<span>Zone</span></div><nav aria-label="Navegación principal"><a href="#juegos">Juegos</a><a href="#sobre">Sobre la web</a></nav></header>
 <main>
-<section class="hero"><img class="hero-controller" src="controller-neon.svg?v=2" alt="Mando negro con iluminación de neón azul y morada"><p class="eyebrow">● JUEGOS ONLINE GRATIS</p><h1>Bienvenido a<br>juega<span style="color:#247bff">Zone</span></h1><p>Disfruta de los mejores juegos online, gratis y sin límites.<br>Juega, compite y diviértete cuando quieras.</p><a class="btn" href="#juegos">Explorar juegos&nbsp; →</a></section>
+<section class="hero"><img class="hero-controller" src="controller-neon.svg?v=3" alt="Mando negro con iluminación de neón azul y morada"><p class="eyebrow">♛ JUEGA SIN LÍMITES · JUEGOS ONLINE GRATIS</p><h1>Bienvenido a<br>juega<span style="color:#247bff">Zone</span></h1><p>Disfruta de los mejores juegos online, gratis y sin límites.<br>Juega, compite y diviértete cuando quieras.</p><a class="btn" href="#juegos">Explorar juegos&nbsp; →</a></section>
+<div class="category-bar" aria-label="Categorías de juegos">
+<button class="category-chip selected" data-filter="all" type="button">▦ Todos</button>
+<button class="category-chip" data-filter="logica" type="button">☆ Lógica</button>
+<button class="category-chip" data-filter="arcade" type="button">♨ Arcade</button>
+<button class="category-chip" data-filter="deportes" type="button">🏆 Deportes</button>
+<button class="category-chip" data-filter="clasicos" type="button">🎮 Clásicos</button>
+</div>
 <div class="search"><input id="search" type="search" placeholder="🔎 Busca un juego..." aria-label="Buscar juegos"><button class="btn" id="clear" type="button">Ver todos</button></div>
 <section id="juegos"><div class="section-head"><h2>🎮 Todos los juegos</h2><p id="count">6 juegos</p></div><div class="grid" id="cards">
 <article class="card" data-name="adivina el numero logica"><div class="cover">🔢</div><span class="tag">Lógica</span><h3>Adivina el número</h3><p>Averigua el número secreto del 1 al 100 con pistas.</p><button class="btn play" data-game="number">Jugar ahora</button></article>
@@ -112,6 +149,20 @@ document.querySelectorAll('.coinChoice').forEach(b=>b.onclick=()=>{const result=
 /* Space Invaders */
 (()=>{const cv=document.getElementById('invadersCanvas'),ctx=cv.getContext('2d');let ship=170,bullets=[],aliens=[],run=false,raf,score=0,dir=1,step=0;function init(){cancelAnimationFrame(raf);ship=170;bullets=[];aliens=[];for(let row=0;row<3;row++)for(let col=0;col<7;col++)aliens.push({x:28+col*45,y:35+row*35,alive:true});run=true;score=0;dir=1;step=0;document.getElementById('invadersResult').textContent='Puntuación: 0';loop()}function move(n){ship=Math.max(8,Math.min(322,ship+n))}function fire(){if(run)bullets.push({x:ship+9,y:282})}function loop(){if(!run)return;step++;if(step%20===0){let edge=false;aliens.filter(a=>a.alive).forEach(a=>{a.x+=dir*8;if(a.x>330||a.x<5)edge=true});if(edge){dir*=-1;aliens.filter(a=>a.alive).forEach(a=>a.y+=12)}}bullets.forEach(b=>b.y-=5);for(const b of bullets)for(const a of aliens)if(a.alive&&Math.abs(b.x-a.x)<16&&Math.abs(b.y-a.y)<12){a.alive=false;b.y=-10;score++}bullets=bullets.filter(b=>b.y>0);ctx.clearRect(0,0,360,320);ctx.fillStyle='#b6a6ff';aliens.filter(a=>a.alive).forEach(a=>ctx.fillText('👾',a.x,a.y));ctx.fillStyle='#70f0a5';ctx.fillText('🚀',ship,302);ctx.fillStyle='#ffdf72';bullets.forEach(b=>ctx.fillRect(b.x,b.y,3,9));document.getElementById('invadersResult').textContent='Puntuación: '+score;if(!aliens.some(a=>a.alive)){run=false;document.getElementById('invadersResult').textContent='🏆 ¡Has vencido a todos los invasores! Puntuación: '+score;return}if(aliens.some(a=>a.alive&&a.y>275)){run=false;document.getElementById('invadersResult').textContent='¡Los invasores han llegado! Pulsa reiniciar.';return}raf=requestAnimationFrame(loop)}document.addEventListener('keydown',e=>{if(document.getElementById('invaders').classList.contains('active')){if(e.key==='ArrowLeft'){e.preventDefault();move(-12)}if(e.key==='ArrowRight'){e.preventDefault();move(12)}if(e.code==='Space'){e.preventDefault();fire()}}});document.getElementById('invadersLeft').onclick=()=>move(-18);document.getElementById('invadersRight').onclick=()=>move(18);document.getElementById('invadersFire').onclick=fire;cv.addEventListener('pointerdown',fire);document.getElementById('invadersStart').onclick=init;init()})();
 let current=5,streak=0;function resetHigher(){current=Math.floor(Math.random()*9)+1;streak=0;document.getElementById('currentNumber').textContent=current;document.getElementById('higherResult').textContent='Racha: 0'}function guessHigher(choice){const next=Math.floor(Math.random()*10)+1;let msg=next===current?'¡Salió el mismo número!':((choice==='higher'&&next>current)||(choice==='lower'&&next<current))?'✅ ¡Correcto!':'❌ ¡Esta vez no!';if(next!==current&&msg.startsWith('✅'))streak++;else if(next!==current)streak=0;document.getElementById('higherResult').textContent=msg+' Número nuevo: '+next+' · Racha: '+streak;current=next;document.getElementById('currentNumber').textContent=current}document.getElementById('higherBtn').onclick=()=>guessHigher('higher');document.getElementById('lowerBtn').onclick=()=>guessHigher('lower');document.getElementById('resetHigher').onclick=resetHigher;resetHigher();
+
+/* Filtros rápidos de categorías */
+document.querySelectorAll('.category-chip').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.category-chip').forEach(b=>b.classList.remove('selected'));
+ btn.classList.add('selected');
+ const filter=btn.dataset.filter;
+ document.querySelectorAll('#cards .card').forEach(card=>{
+  const name=(card.dataset.name+' '+card.innerText).toLowerCase();
+  const match=filter==='all'||(filter==='logica'&&/numero|sumas|mayor|menor|memoria|reflejos/.test(name))||(filter==='arcade'&&/snake|pong|breakout|space invaders|invasores/.test(name))||(filter==='deportes'&&/carreras|deporte/.test(name))||(filter==='clasicos'&&/tres en raya|piedra|cara o cruz/.test(name));
+  card.classList.toggle('hidden',!match);
+ });
+ const visible=document.querySelectorAll('#cards .card:not(.hidden)').length;
+ document.getElementById('count').textContent=visible+' juegos disponibles';
+}));
 </script>
 </body>
 </html>
